@@ -7,7 +7,5 @@ Our project consists of three main sections and they are;
 * Inferencing of the DNN and fusion of sensors using the DE10-Nano FPGA board
 * Interfacing of external devices with the DE10-Nano FPGA board
 
-This repository mainly focuses on the training of the DNN for sign language translation - for sign language gesture
-classification.
-This process was started by identifying a few features to train a Support Vector Classifier to do the classification using 
+Before training a DNN for sign language translation - for sign language gesture classification the process started by identifying a few features to train a Support Vector Classifier to do the classification using 
 the American Sign Language(ASL) examples in this dataset available at the following [website](https://data.mendeley.com/datasets/wgswcr8z24/2)
