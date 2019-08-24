@@ -9,3 +9,4 @@ Our project consists of three main sections and they are;
 
 Before training a DNN for sign language translation - for sign language gesture classification the process started by identifying a few features to train a Support Vector Classifier to do the classification using 
 the American Sign Language(ASL) examples in this dataset available at the following [website](https://data.mendeley.com/datasets/wgswcr8z24/2)
+We are planning to use Intel openCL SDK for FPGA to implement the system in the FPGA board.
