@@ -11,8 +11,8 @@ the American Sign Language(ASL) examples in this dataset available at the follow
 
 Feature engineering and training models were done using Python 3 in JupyterLab. We used correlation matrices and PCA plots to determine the final set of signals and features to be used in our final model. 
 Our features include;
-* For EMG signals - Energy, Slope Sign Change, Skewness, Kurtosis
-* For gyroscope signals - Energy, Slope Sign Change, Maximum Value
+* For EMG signals - Energy, Slope Sign Change, Skewness, Kurtosis.
+* For gyroscope signals - Energy, Slope Sign Change, Maximum Value.
 Finally we created a neural network which utlizes these features for the classification process and our neural network was capable of producing a training accuracy of 98.84%, a validation accuracy of 95.45% and a test accuracy of 92.86%.
 
 We are planning to use Intel openCL SDK for FPGA to implement the system in the FPGA board.
