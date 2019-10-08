@@ -1,6 +1,5 @@
 # Realtime-Sign-Language-Translation-to-Speech-DNN
-This project is carried out for the InnovateFPGA 2019 competition as regional finalists in the AciaPacific region. Our project
-details are available [here](http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP047).
+This project is carried out for the InnovateFPGA 2019 competition as regional finalists in the AciaPacific region. A detailed discription of our project and demonstration video is available [here](http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP047).
 
 Our project consists of three main sections and they are;
 * Training a Deep Neural Network(DNN) to classify atleast 5 sign language gestures.
