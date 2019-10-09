@@ -16,4 +16,13 @@ Our features include;
 
 Finally we created a neural network which utlizes these features for the classification process and our neural network was capable of producing a training accuracy of 98.84%, a validation accuracy of 95.45% and a test accuracy of 92.86%.
 
-We are planning to use Intel openCL SDK for FPGA to implement the system in the FPGA board.
+We used Intel openCL SDK for FPGA to implement the system in the FPGA board.
+
+Project demonstration video:
+
+
+[![Project demonstration video](https://img.youtube.com/vi/fX6Gb8bn6kc/0.jpg)](https://www.youtube.com/watch?v=fX6Gb8bn6kc)
+
+
+**However due to a problem persisting with the ARM Core of our DE-10 Nano Board, we are yet to evaluate the performance. 
+We are corresponding with terasic for their support on this matter.**

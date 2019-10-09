@@ -1,0 +1,3 @@
+﻿  OpenCLNN.cpp
+c:\users\hasindu\documents\university\innovate fpga\neural_network\openclnn\openclnn\openclnn.cpp(93): warning C4018: '<': signed/unsigned mismatch
+  OpenCLNN.vcxproj -> C:\Users\Hasindu\Documents\University\Innovate FPGA\Neural_Network\OpenCLNN\Debug\OpenCLNN.exe
