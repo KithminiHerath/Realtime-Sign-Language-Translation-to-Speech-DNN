@@ -21,7 +21,7 @@ We used Intel openCL SDK for FPGA to implement the system in the FPGA board.
 Project demonstration video:
 
 
-[![Project demonstration video](https://img.youtube.com/vi/fX6Gb8bn6kc/0.jpg)](https://www.youtube.com/watch?v=fX6Gb8bn6kc)
+[![Project demonstration video](https://github.com/KithminiHerath/Realtime-Sign-Language-Translation-to-Speech-DNN/blob/master/meta/youtube.png?raw=true)](https://www.youtube.com/watch?v=fX6Gb8bn6kc)
 
 
 **However due to a problem persisting with the ARM Core of our DE-10 Nano Board, we are yet to evaluate the performance. 
