@@ -20,7 +20,9 @@ We used Intel openCL SDK for FPGA to implement the system in the FPGA board.
 
 Project demonstration video:
 
-<p align="center">[![Project demonstration video](https://img.youtube.com/vi/fX6Gb8bn6kc/0.jpg)](https://www.youtube.com/watch?v=fX6Gb8bn6kc)</p>
+<center>
+[![Project demonstration video](https://img.youtube.com/vi/fX6Gb8bn6kc/0.jpg)](https://www.youtube.com/watch?v=fX6Gb8bn6kc)
+</center>
 
 **However due to a problem persisting with the ARM Core of our DE-10 Nano Board, we are yet to evaluate the performance. 
 We are corresponding with terasic for their support on this matter.**
