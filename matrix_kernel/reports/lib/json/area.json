@@ -1,0 +1,583 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [38.2428, 25.2765, 15.4182, 21.0117, 5.35714]
+  , "total":
+  [27696, 33788, 108, 6]
+  , "name":"Kernel System"
+  , "max_resources":
+  [109572, 219144, 514, 112]
+  , "children":
+  [
+    {
+      "name":"Board interface"
+      , "type":"resource"
+      , "data":
+      [2160, 1908, 20, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Platform interface logic."
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [9588, 10682, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 3 global loads and 1 global store. Reduce number of global loads and stores to simplify global interconnect."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"https://www.altera.com/documentation/mwh1391807516407.html#hnj1476724450050"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"matrix_multiply"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [22.8956, 14.5548, 9.67309, 17.1206, 5.35714]
+      , "total_kernel_resources":
+      [15948, 21198, 88, 6]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1574, 1505, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"matrix_multiply.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [51, 101, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [51, 101, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [84, 44, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"matrix.cl:6"
+                  , "type":"resource"
+                  , "data":
+                  [66, 0, 0, 2]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+                        , "line":6
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [66, 0, 0, 2]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"matrix_multiply.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [214, 239, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [214, 239, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [27, 74, 3, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [71, 3, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [70, 2, 0, 0]
+                    }
+                    , {
+                      "name":"Or"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [1, 1, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"matrix.cl:5"
+                  , "type":"resource"
+                  , "data":
+                  [40.3333, 0.666667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+                        , "line":5
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [7.33333, 0.666667, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"matrix.cl:6"
+                  , "type":"resource"
+                  , "data":
+                  [9746, 12160, 56, 4]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+                        , "line":6
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Double-precision Floating-point Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2859, 2517, 0, 0]
+                    }
+                    , {
+                      "name":"Double-precision Floating-point Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3366, 3278, 0, 4]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [3488, 6365, 56, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced cached LSU.  Load with a private 64 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+                        }
+                        , {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"matrix.cl:7"
+                  , "type":"resource"
+                  , "data":
+                  [3.66667, 0.333333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+                        , "line":7
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.66667, 0.333333, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"matrix_multiply.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [108, 215, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [108, 215, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [146, 67, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [64, 64, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [64, 64, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"matrix.cl:4"
+                  , "type":"resource"
+                  , "data":
+                  [35, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+                        , "line":4
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"matrix.cl:5"
+                  , "type":"resource"
+                  , "data":
+                  [35, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+                        , "line":5
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"matrix.cl:8"
+                  , "type":"resource"
+                  , "data":
+                  [3683, 6723, 29, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+                        , "line":8
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Double-precision Floating-point Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [2859, 2517, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [470, 2034, 13, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [354, 2172, 16, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

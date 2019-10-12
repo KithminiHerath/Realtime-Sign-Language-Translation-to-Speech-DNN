@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"name":"Project Name","data":["reluLayer"],"classes":["info-table"]},
+{"name":"Target Family, Device, Board","data":["Cyclone V, 5CSXFC6D6F31C8ES, de10_nano:de10_nano_sharedonly"]},
+{"name":"AOC Version","data":["18.1.0 Build 625"]},
+{"name":"Quartus Version","data":["18.1.0 Build 625"]},
+{"name":"Command","data":["aoc reluLayer.cl -o reluLayer.aocx -board=de10_nano_sharedonly -report"]},
+{"name":"Reports Generated At", "data":["Mon Oct  7 17:35:19 2019"]}
+]}

@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"name":"Project Name","data":["matrix"],"classes":["info-table"]},
+{"name":"Target Family, Device, Board","data":["Cyclone V, 5CSXFC6D6F31C8ES, de10_nano:de10_nano_sharedonly"]},
+{"name":"AOC Version","data":["18.1.0 Build 625"]},
+{"name":"Quartus Version","data":["18.1.0 Build 625"]},
+{"name":"Command","data":["aoc matrix.cl -o matrix.aocx -board=de10_nano_sharedonly -report"]},
+{"name":"Reports Generated At", "data":["Mon Oct  7 15:55:11 2019"]}
+]}

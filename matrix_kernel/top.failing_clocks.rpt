@@ -1,0 +1,7 @@
+Clock domains failing timing
++--------+---------------+-----------------------------------------------------------------------------------------------------------+-----------------------+-----------------+
+; Slack  ; End Point TNS ; Clock                                                                                                     ; Operating conditions  ; Timing analysis ;
++--------+---------------+-----------------------------------------------------------------------------------------------------------+-----------------------+-----------------+
+; -0.042 ; -0.624        ; the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; Slow 1100mV 0C Model  ; Hold            ;
+; -0.036 ; -0.516        ; the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk ; Slow 1100mV 85C Model ; Hold            ;
++--------+---------------+-----------------------------------------------------------------------------------------------------------+-----------------------+-----------------+

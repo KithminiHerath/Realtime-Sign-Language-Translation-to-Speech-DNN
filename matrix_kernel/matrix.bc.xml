@@ -1,0 +1,149 @@
+<KERNEL_LIST>
+	<PROGRAM_GLOBAL_MEM_SIZE value="0" />
+	<KERNEL_BUNDLE name="matrix_multiply" compute_units="1">
+	<KERNEL name="matrix_multiply" filename="kernel_hdl/matrix_multiply/matrix_multiply_function_wrapper.vhd" version="1" cosim_name="matrix_multiply" enable_global_profiling="1" workgroup_invariant="0" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0" arbitration_latency="5" kernel_side_mem_latency="8">
+		<RESOURCE_INFO>
+			<ID value="0" />
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="0" />
+			<MAX_WORK_GROUP_SIZE value="2147483647" />
+			<REQUIRED_WORK_GROUP_SIZE x="0" y="0" z="0" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="slave" cosim_name="" width="64" size="256" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/windows64/lib/dspba/Libraries/vhdl/base/dspba_library_package.vhd" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/windows64/lib/dspba/Libraries/vhdl/base/dspba_library.vhd" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_master.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_loop_limiter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_function_wrapper.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_function.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/bb_matrix_multiply_B1_sr_0.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/bb_matrix_multiply_B1_sr_1.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/bb_matrix_multiply_B2_sr_0.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/bb_matrix_multiply_B0.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/bb_matrix_multiply_B0_stall_region.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_sfc_c0_entry_matrix_multiply_c0_enter_matrix_multiply.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_acl_sfc_exit_c0_entry_matrix_multiply_A0Zmatrix_multiply4.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_acl_sfc_exit_c0_entry_matrix_multiply_A0Ziply46_data_fifo.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_acl_sfc_exit_c0_entry_matrix_multiply_A0Zly_full_detector.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_sfc_logic_c0_entry_matrix_multiply_c0_A0Zmatrix_multiply0.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_p_sync_buffer4_matrix_multiply2.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_B0_merge_reg.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_B0_branch.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_B0_merge.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/bb_matrix_multiply_B1.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/bb_matrix_multiply_B1_stall_region.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_sfc_c0_for_body_matrix_multiply_c0_entA0Z_matrix_multiply.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_acl_sfc_exit_c0_for_body_matrix_multipA0Zatrix_multiply26.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_acl_sfc_exit_c0_for_body_matrix_multipA0Ziply48_data_fifo.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_acl_sfc_exit_c0_for_body_matrix_multipA0Zly_full_detector.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_sfc_logic_c0_for_body_matrix_multiply_A0Zatrix_multiply24.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/floatComponent_i_sfc_logic_c0_for_body_mA0Zcqp00j0ocqd0j60z.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/floatComponent_i_sfc_logic_c0_for_body_mA0Za0054c2a6342iyc5.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_B1_merge_reg.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_load_unnamed_matrix_multiply0_matrix_multiply20.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/readdata_reg_unnamed_matrix_multiply0_matrix_multiply0.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_load_unnamed_matrix_multiply1_matrix_multiply22.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/readdata_reg_unnamed_matrix_multiply1_matrix_multiply1.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_a_sync_buffer_matrix_multiply5.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_b_sync_buffer_matrix_multiply11.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_n_sync_buffer_matrix_multiply9.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_p_sync_buffer3_matrix_multiply13.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_p_sync_buffer_matrix_multiply7.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_B1_branch.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_B1_merge.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/bb_matrix_multiply_B2.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/bb_matrix_multiply_B2_stall_region.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_sfc_c0_for_end_loopexit_matrix_multiplA0Z_matrix_multiply.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_acl_sfc_exit_c0_for_end_loopexit_matriA0Zatrix_multiply43.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_acl_sfc_exit_c0_for_end_loopexit_matriA0Ziply50_data_fifo.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_acl_sfc_exit_c0_for_end_loopexit_matriA0Zly_full_detector.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_sfc_logic_c0_for_end_loopexit_matrix_mA0Zatrix_multiply38.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/floatComponent_i_sfc_logic_c0_for_end_loA0Zd0j60ocqd006ou0z.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_p_sync_buffer2_matrix_multiply40.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_load_unnamed_matrix_multiply2_matrix_multiply36.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/readdata_reg_unnamed_matrix_multiply2_matrix_multiply2.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_store_unnamed_matrix_multiply3_matrix_multiply44.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_c_sync_buffer_matrix_multiply31.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_d_sync_buffer_matrix_multiply29.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/i_syncbuf_n_sync_buffer1_matrix_multiply27.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_B2_branch.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_B2_merge.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/loop_limiter_matrix_multiply0.vhd" />
+			<FILE name="kernel_hdl/matrix_multiply/matrix_multiply_function_cra_slave.vhd" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="unnamed_matrix_multiply0" cosim_name="" type="master" width="256" true_lsu_width="64" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="read" criticality="1048576" buffer_location="" group_id="0" />
+			<INTERFACE port="unnamed_matrix_multiply1" cosim_name="" type="master" width="256" true_lsu_width="64" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="read" criticality="1048576" buffer_location="" group_id="0" />
+			<INTERFACE port="unnamed_matrix_multiply2" cosim_name="" type="master" width="256" true_lsu_width="64" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="read" criticality="1024" buffer_location="" group_id="0" />
+			<INTERFACE port="unnamed_matrix_multiply3" cosim_name="" type="master" width="256" true_lsu_width="64" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="write" criticality="1024" buffer_location="" group_id="0" />
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="M" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="int" >
+		</ARGUMENT>
+			<ARGUMENT name="N" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="int" >
+		</ARGUMENT>
+			<ARGUMENT name="P" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="int" >
+		</ARGUMENT>
+			<ARGUMENT name="A" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="C" access_qualifier="ARG_ACCESS_NONE" type_name="double*" >
+		</ARGUMENT>
+			<ARGUMENT name="B" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="C" access_qualifier="ARG_ACCESS_NONE" type_name="double*" >
+		</ARGUMENT>
+			<ARGUMENT name="C" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="double*" >
+		</ARGUMENT>
+			<ARGUMENT name="D" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="C" access_qualifier="ARG_ACCESS_NONE" type_name="double*" >
+		</ARGUMENT>
+		</KERNEL_ARGS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<STRUCT_TYPE_DEFS>
+	</STRUCT_TYPE_DEFS>
+</KERNEL_LIST>

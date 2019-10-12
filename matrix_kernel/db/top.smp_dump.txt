@@ -1,0 +1,16 @@
+
+State Machine - |top|system:the_system|system_acl_iface:acl_iface|system_acl_iface_mm_interconnect_1:mm_interconnect_1|altera_merlin_burst_adapter:pipe_stage_host_ctrl_s0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |top|system:the_system|system_acl_iface:acl_iface|system_acl_iface_acl_kernel_clk:acl_kernel_clk|system_acl_iface_acl_kernel_clk_kernel_pll:kernel_pll|altera_pll:altera_pll_i|dps_extra_kick:dps_extra_inst|dps_current_state
+Name dps_current_state.PHASE_DONE_LOW_0 dps_current_state.PHASE_DONE_LOW_4 dps_current_state.PHASE_DONE_LOW_3 dps_current_state.PHASE_DONE_LOW_2 dps_current_state.PHASE_DONE_LOW_1 dps_current_state.PHASE_DONE_HIGH 
+dps_current_state.PHASE_DONE_HIGH 0 0 0 0 0 0 
+dps_current_state.PHASE_DONE_LOW_1 0 0 0 0 1 1 
+dps_current_state.PHASE_DONE_LOW_2 0 0 0 1 0 1 
+dps_current_state.PHASE_DONE_LOW_3 0 0 1 0 0 1 
+dps_current_state.PHASE_DONE_LOW_4 0 1 0 0 0 1 
+dps_current_state.PHASE_DONE_LOW_0 1 0 0 0 0 1 

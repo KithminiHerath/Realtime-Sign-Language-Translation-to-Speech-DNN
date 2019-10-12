@@ -1,0 +1,116 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units"]
+    , "children":
+    [
+      {
+        "name":"matrix_multiply"
+        , "data":
+        [
+          "NDRange"
+          , "No"
+          , "n/a"
+          , 1
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: NDRange"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+              , "line":1
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs "]
+    , "children":
+    [
+      {
+        "name":"matrix_multiply"
+        , "data":
+        [15948, 21198, 88, 6]
+        , "debug":
+        [
+          [
+            {
+              "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+              , "line":1
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [9588, 10682, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [2160, 1908, 20, 0]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [27696, 33788, 108, 6]
+        , "data_percent":
+        [25.2765, 15.4182, 21.0117, 5.35714]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [109572, 219144, 514, 112]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+      {
+        "name":"Load uses a Burst-coalesced cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 64 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/matrix.cl"
+              , "line":6
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+<KERNEL_LIST>
+	<PROGRAM_GLOBAL_MEM_SIZE value="0" />
+	<KERNEL_BUNDLE name="RELUActivation" compute_units="1">
+	<KERNEL name="RELUActivation" filename="kernel_hdl/RELUActivation/RELUActivation_function_wrapper.vhd" version="1" cosim_name="RELUActivation" enable_global_profiling="1" workgroup_invariant="1" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0" arbitration_latency="5" kernel_side_mem_latency="8">
+		<RESOURCE_INFO>
+			<ID value="0" />
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="0" />
+			<MAX_WORK_GROUP_SIZE value="2147483647" />
+			<REQUIRED_WORK_GROUP_SIZE x="0" y="0" z="0" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="slave" cosim_name="" width="64" size="128" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/windows64/lib/dspba/Libraries/vhdl/base/dspba_library_package.vhd" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/windows64/lib/dspba/Libraries/vhdl/base/dspba_library.vhd" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_master.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="kernel_hdl/RELUActivation/RELUActivation_function_wrapper.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/RELUActivation_function.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/bb_RELUActivation_B0.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/RELUActivation_B0_branch.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/RELUActivation_B0_merge.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/bb_RELUActivation_B0_stall_region.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/RELUActivation_B0_merge_reg.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_sfc_c0_entry_reluactivation_c0_enter_reluactivation.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_acl_sfc_exit_c0_entry_reluactivation_cA0Z_reluactivation7.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_acl_sfc_exit_c0_entry_reluactivation_cA0Ztion21_data_fifo.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_acl_sfc_exit_c0_entry_reluactivation_cA0Zon_full_detector.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_sfc_logic_c0_entry_reluactivation_c0_eA0Z_reluactivation0.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_syncbuf_z_x_dim_sync_buffer_reluactivation2.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_syncbuf_z_y_dim_sync_buffer_reluactivation4.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_sfc_c1_entry_reluactivation_c1_enter_reluactivation.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_acl_sfc_exit_c1_entry_reluactivation_cA0Zreluactivation18.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_acl_sfc_exit_c1_entry_reluactivation_cA0Ztion23_data_fifo.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_acl_sfc_exit_c1_entry_reluactivation_cA0Zon_full_detector.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_sfc_logic_c1_entry_reluactivation_c1_eA0Zreluactivation16.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_load_unnamed_reluactivation0_reluactivation14.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/readdata_reg_unnamed_RELUActivation0_RELUActivation0.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_store_unnamed_reluactivation1_reluactivation19.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_syncbuf_a_sync_buffer_reluactivation10.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/i_syncbuf_z_sync_buffer_reluactivation8.vhd" />
+			<FILE name="kernel_hdl/RELUActivation/RELUActivation_function_cra_slave.vhd" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="unnamed_RELUActivation0" cosim_name="" type="master" width="256" true_lsu_width="64" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="read" criticality="1024" buffer_location="" group_id="0" />
+			<INTERFACE port="unnamed_RELUActivation1" cosim_name="" type="master" width="256" true_lsu_width="64" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="write" criticality="1024" buffer_location="" group_id="0" />
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="Z" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="C" access_qualifier="ARG_ACCESS_NONE" type_name="double*" >
+		</ARGUMENT>
+			<ARGUMENT name="A" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="double*" >
+		</ARGUMENT>
+			<ARGUMENT name="Z_x_dim" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="int" >
+		</ARGUMENT>
+			<ARGUMENT name="Z_y_dim" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="int" >
+		</ARGUMENT>
+		</KERNEL_ARGS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<STRUCT_TYPE_DEFS>
+	</STRUCT_TYPE_DEFS>
+</KERNEL_LIST>

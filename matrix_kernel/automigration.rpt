@@ -1,0 +1,27 @@
+OpenCL Auto Migration Report
+
+To disable auto migration compile with flag: --no-auto-migrate
+
+Alternatively, you can enable/disable individual fixes
+by adding them to the include/exclude field in board_spec.xml.
+
+----------- Platform ---------
+| Board de10_nano_sharedonly with auto migration type c5soc and 
+| board_spec version 14.1 has the following properties:
+|   family = CYCLONE V
+|   flow = unpreserved
+|   host = ARM32
+|   name = c5soc
+|   pgm = ARM
+|   version = 14.1
+------------------------------
+
+----------- Fixes To Apply ---------
+| none
+------------------------------------
+
+Post-Compile Automigration Report
+----------- Fixes To Apply ---------
+| none
+------------------------------------
+

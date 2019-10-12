@@ -1,0 +1,101 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units"]
+    , "children":
+    [
+      {
+        "name":"RELUActivation"
+        , "data":
+        [
+          "NDRange"
+          , "No"
+          , "n/a"
+          , 1
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: NDRange"
+          }
+          , {
+            "type":"text"
+            , "text":"The kernel does not use any work-group information (such as get_local_id() or get_group_id()).Local work-group size will be automatically modified to match global work-group size on launch.This is a hardware optimization."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer.cl"
+              , "line":1
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs "]
+    , "children":
+    [
+      {
+        "name":"RELUActivation"
+        , "data":
+        [3129, 6211, 29, 2]
+        , "debug":
+        [
+          [
+            {
+              "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer.cl"
+              , "line":1
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [3566, 7148, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [2160, 1908, 20, 0]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [8855, 15267, 49, 2]
+        , "data_percent":
+        [8.08144, 6.96665, 9.53307, 1.78571]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [109572, 219144, 514, 112]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+    ]
+  }
+}

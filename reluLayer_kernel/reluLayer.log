@@ -1,0 +1,264 @@
+Compiler Command: aoc reluLayer.cl -o reluLayer.aocx -board=de10_nano_sharedonly -report
+c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer.cl:1:53: warning: declaring kernel argument with no 'restrict' may lead to low kernel performance
+__kernel void RELUActivation(const __global double* Z, __global double* A, int Z_x_dim, int Z_y_dim) {
+                                                    ^
+c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer.cl:1:73: warning: declaring kernel argument with no 'restrict' may lead to low kernel performance
+__kernel void RELUActivation(const __global double* Z, __global double* A, int Z_x_dim, int Z_y_dim) {
+                                                                        ^
+2 warnings generated.
+
+!===========================================================================
+! The report below may be inaccurate. A more comprehensive           
+! resource usage report can be found at reluLayer/reports/report.html    
+!===========================================================================
+
++--------------------------------------------------------------------+
+; Estimated Resource Usage Summary                                   ;
++----------------------------------------+---------------------------+
+; Resource                               + Usage                     ;
++----------------------------------------+---------------------------+
+; Logic utilization                      ;   14%                     ;
+; ALUTs                                  ;    8%                     ;
+; Dedicated logic registers              ;    7%                     ;
+; Memory blocks                          ;   10%                     ;
+; DSP blocks                             ;    2%                     ;
++----------------------------------------+---------------------------;
+System name: reluLayer
+
+2019.10.07.17:35:22 Info: Doing: <b>qsys-script --quartus-project=top --script=system.tcl --Xmx512M --XX:+UseSerialGC --system-file=system.qsys</b>
+2019.10.07.17:36:13 Info: set_validation_property AUTOMATIC_VALIDATION false
+2019.10.07.17:36:13 Info: add_instance reluLayer_system reluLayer_system 
+2019.10.07.17:36:13 Info: add_connection acl_iface.kernel_clk reluLayer_system.clock_reset
+2019.10.07.17:36:13 Info: add_connection acl_iface.kernel_clk2x reluLayer_system.clock_reset2x
+2019.10.07.17:36:13 Info: add_connection acl_iface.kernel_reset reluLayer_system.clock_reset_reset
+2019.10.07.17:36:13 Info: add_connection reluLayer_system.avm_mem_gmem0_port_0_0_rw acl_iface.kernel_mem0
+2019.10.07.17:36:13 Info: add_connection acl_iface.kernel_irq reluLayer_system.kernel_irq
+2019.10.07.17:36:13 Info: add_instance cra_root cra_ring_root 
+2019.10.07.17:36:13 Info: set_instance_parameter_value cra_root ASYNC_RESET 1
+2019.10.07.17:36:13 Info: set_instance_parameter_value cra_root SYNCHRONIZE_RESET 0
+2019.10.07.17:36:13 Info: set_instance_parameter_value cra_root DATA_W 64
+2019.10.07.17:36:13 Info: set_instance_parameter_value cra_root ADDR_W 4
+2019.10.07.17:36:13 Info: set_instance_parameter_value cra_root ID_W 0
+2019.10.07.17:36:13 Info: add_connection acl_iface.kernel_clk cra_root.clock
+2019.10.07.17:36:13 Info: add_connection acl_iface.kernel_reset cra_root.reset
+2019.10.07.17:36:13 Info: add_connection acl_iface.kernel_cra cra_root.cra_slave
+2019.10.07.17:36:13 Info: set_connection_parameter_value acl_iface.kernel_cra/cra_root.cra_slave baseAddress 0x0
+2019.10.07.17:36:13 Info: add_instance avs_RELUActivation_cra_cra_ring cra_ring_node 
+2019.10.07.17:36:13 Info: set_instance_parameter_value avs_RELUActivation_cra_cra_ring ASYNC_RESET 1
+2019.10.07.17:36:13 Info: set_instance_parameter_value avs_RELUActivation_cra_cra_ring SYNCHRONIZE_RESET 0
+2019.10.07.17:36:13 Info: set_instance_parameter_value avs_RELUActivation_cra_cra_ring DATA_W 64
+2019.10.07.17:36:13 Info: set_instance_parameter_value avs_RELUActivation_cra_cra_ring RING_ADDR_W 4
+2019.10.07.17:36:13 Info: set_instance_parameter_value avs_RELUActivation_cra_cra_ring CRA_ADDR_W 4
+2019.10.07.17:36:13 Info: set_instance_parameter_value avs_RELUActivation_cra_cra_ring ID_W 0
+2019.10.07.17:36:13 Info: set_instance_parameter_value avs_RELUActivation_cra_cra_ring ID 0
+2019.10.07.17:36:13 Info: add_connection acl_iface.kernel_clk avs_RELUActivation_cra_cra_ring.clock
+2019.10.07.17:36:13 Info: add_connection acl_iface.kernel_reset avs_RELUActivation_cra_cra_ring.reset
+2019.10.07.17:36:13 Info: add_connection cra_root.ring_out avs_RELUActivation_cra_cra_ring.ring_in
+2019.10.07.17:36:13 Info: add_connection avs_RELUActivation_cra_cra_ring.cra_master reluLayer_system.avs_RELUActivation_cra
+2019.10.07.17:36:13 Info: set_connection_parameter_value avs_RELUActivation_cra_cra_ring.cra_master/reluLayer_system.avs_RELUActivation_cra baseAddress 0x0
+2019.10.07.17:36:13 Info: add_connection avs_RELUActivation_cra_cra_ring.ring_out cra_root.ring_in
+2019.10.07.17:36:13 Info: save_system 
+2019.10.07.17:36:15 Info: 
+********************************************************************************************************************
+
+Use qsys-generate for a simpler command-line interface for generating IP.
+
+Run ip-generate with switch --remove-qsys-generate-warning to prevent this notice from appearing in subsequent runs.
+
+********************************************************************************************************************
+2019.10.07.17:36:22 Progress: Loading reluLayer/system.qsys
+2019.10.07.17:36:22 Progress: Reading input file
+2019.10.07.17:36:22 Progress: Adding acl_iface [acl_iface_system 1.0]
+2019.10.07.17:36:50 Progress: Parameterizing module acl_iface
+2019.10.07.17:36:50 Progress: Adding avs_RELUActivation_cra_cra_ring [cra_ring_node 1.0]
+2019.10.07.17:36:50 Progress: Parameterizing module avs_RELUActivation_cra_cra_ring
+2019.10.07.17:36:50 Progress: Adding cra_root [cra_ring_root 1.0]
+2019.10.07.17:36:50 Progress: Parameterizing module cra_root
+2019.10.07.17:36:50 Progress: Adding ext_clk_50 [clock_source 18.1]
+2019.10.07.17:36:50 Progress: Parameterizing module ext_clk_50
+2019.10.07.17:36:50 Progress: Adding reluLayer_system [reluLayer_system 14.0]
+2019.10.07.17:36:50 Progress: Parameterizing module reluLayer_system
+2019.10.07.17:36:50 Progress: Building connections
+2019.10.07.17:36:50 Progress: Parameterizing connections
+2019.10.07.17:36:50 Progress: Validating
+2019.10.07.17:37:21 Progress: Done reading input file
+2019.10.07.17:38:19 Warning: system.acl_iface.acl_kernel_clk.kernel_clk: The input clock frequency must be known or set by the parent if this is a subsystem.
+2019.10.07.17:38:19 Info: system.acl_iface.acl_kernel_clk.kernel_pll: The legal reference clock frequency is 50.0 MHz..800.0 MHz
+2019.10.07.17:38:19 Info: system.acl_iface.acl_kernel_clk.kernel_pll: Able to implement PLL with user settings
+2019.10.07.17:38:19 Warning: system.acl_iface.acl_kernel_clk.kernel_pll: kernel_pll.reconfig_to_pll must be exported, or connected to a matching conduit.
+2019.10.07.17:38:19 Warning: system.acl_iface.acl_kernel_clk.kernel_pll: kernel_pll.reconfig_from_pll must be exported, or connected to a matching conduit.
+2019.10.07.17:38:19 Warning: system.acl_iface.acl_kernel_interface.: Can't contact license server "1709@licserver.mrt.ac.lk" -- this server will be ignored.
+2019.10.07.17:38:19 Info: system.acl_iface.hps: HPS Main PLL counter settings: n = 0  m = 63
+2019.10.07.17:38:19 Info: system.acl_iface.hps: HPS peripherial PLL counter settings: n = 0  m = 39
+2019.10.07.17:38:19 Info: system.acl_iface.pll: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+2019.10.07.17:38:19 Info: system.acl_iface.pll: Able to implement PLL with user settings
+2019.10.07.17:38:19 Warning: system.acl_iface.acl_kernel_clk.kernel_clk/kernel_clk.clk_in: kernel_clk.clk_in requires 50000000Hz, but source has frequency of 0Hz
+2019.10.07.17:38:19 Warning: system.acl_iface.acl_kernel_interface: acl_kernel_interface.acl_bsp_memorg_host0x018 must be exported, or connected to a matching conduit.
+2019.10.07.17:38:19 Warning: system.acl_iface.acl_kernel_clk: acl_kernel_clk.ctrl must be connected to an Avalon-MM master
+2019.10.07.17:38:19 Warning: system.acl_iface: acl_iface.acl_internal_memorg_kernel must be exported, or connected to a matching conduit.
+2019.10.07.17:38:19 Warning: system.acl_iface: acl_iface.acl_kernel_clk_kernel_pll_locked must be exported, or connected to a matching conduit.
+2019.10.07.17:38:19 Info: system: Generating system "system" for QUARTUS_SYNTH
+2019.10.07.17:38:29 Info: Interconnect is inserted between master reluLayer_system.avm_mem_gmem0_port_0_0_rw and slave acl_iface.kernel_mem0 because the master has address signal 30 bit wide, but the slave is 25 bit wide.
+2019.10.07.17:38:30 Info: Interconnect is inserted between master acl_iface.kernel_cra and slave cra_root.cra_slave because the master has burstcount signal 1 bit wide, but the slave is 0 bit wide.
+2019.10.07.17:38:30 Info: Interconnect is inserted between master acl_iface.kernel_cra and slave cra_root.cra_slave because the master has address signal 30 bit wide, but the slave is 4 bit wide.
+2019.10.07.17:38:30 Info: Interconnect is inserted between master acl_iface.kernel_cra and slave cra_root.cra_slave because the master has debugaccess signal 1 bit wide, but the slave is 0 bit wide.
+2019.10.07.17:38:44 Info: Interconnect is inserted between master address_span_extender_kernel.expanded_master and slave hps.f2h_sdram0_data because the master has address signal 32 bit wide, but the slave is 27 bit wide.
+2019.10.07.17:38:44 Info: Interconnect is inserted between master address_span_extender_kernel.expanded_master and slave hps.f2h_sdram0_data because the master has burstcount signal 5 bit wide, but the slave is 8 bit wide.
+2019.10.07.17:38:45 Info: Interconnect is inserted between master hps.h2f_lw_axi_master and slave pipe_stage_host_ctrl.s0 because the master is of type axi and the slave is of type avalon.
+2019.10.07.17:38:47 Info: Interconnect is inserted between master clock_cross_kernel_mem1.m0 and slave address_span_extender_kernel.windowed_slave because the master has debugaccess signal 1 bit wide, but the slave is 0 bit wide.
+2019.10.07.17:38:47 Warning: hps.f2h_irq0: Cannot connect clock for irq_mapper.sender
+2019.10.07.17:38:47 Warning: hps.f2h_irq0: Cannot connect reset for irq_mapper.sender
+2019.10.07.17:38:47 Warning: hps.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+2019.10.07.17:38:47 Warning: hps.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+2019.10.07.17:38:53 Info: acl_iface: "system" instantiated acl_iface_system "acl_iface"
+2019.10.07.17:38:53 Info: avs_RELUActivation_cra_cra_ring: "system" instantiated cra_ring_node "avs_RELUActivation_cra_cra_ring"
+2019.10.07.17:38:53 Info: cra_root: "system" instantiated cra_ring_root "cra_root"
+2019.10.07.17:38:54 Info: reluLayer_system: "system" instantiated reluLayer_system "reluLayer_system"
+2019.10.07.17:38:54 Info: mm_interconnect_0: "system" instantiated altera_mm_interconnect "mm_interconnect_0"
+2019.10.07.17:38:55 Info: mm_interconnect_2: "system" instantiated altera_mm_interconnect "mm_interconnect_2"
+2019.10.07.17:38:55 Info: irq_mapper: "system" instantiated altera_irq_mapper "irq_mapper"
+2019.10.07.17:38:55 Info: rst_controller: "system" instantiated altera_reset_controller "rst_controller"
+2019.10.07.17:38:56 Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+2019.10.07.17:38:56 Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+2019.10.07.17:38:58 Info: acl_kernel_clk: "acl_iface" instantiated acl_kernel_clk_noreconfig "acl_kernel_clk"
+2019.10.07.17:38:58 Info: Interconnect is inserted between master address_span_extender_0.expanded_master and slave kernel_cra.s0 because the master has readdata signal 32 bit wide, but the slave is 64 bit wide.
+2019.10.07.17:38:58 Info: Interconnect is inserted between master address_span_extender_0.expanded_master and slave kernel_cra.s0 because the master has writedata signal 32 bit wide, but the slave is 64 bit wide.
+2019.10.07.17:38:58 Info: Interconnect is inserted between master address_span_extender_0.expanded_master and slave kernel_cra.s0 because the master has byteenable signal 4 bit wide, but the slave is 8 bit wide.
+2019.10.07.17:39:00 Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+2019.10.07.17:39:00 Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+2019.10.07.17:39:00 Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+2019.10.07.17:39:00 Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+2019.10.07.17:39:00 Warning: irq_ena_0.my_irq_in: Cannot connect clock for irq_mapper.sender
+2019.10.07.17:39:00 Warning: irq_ena_0.my_irq_in: Cannot connect reset for irq_mapper.sender
+2019.10.07.17:39:02 Info: acl_kernel_interface: "acl_iface" instantiated acl_kernel_interface_soc "acl_kernel_interface"
+2019.10.07.17:39:02 Info: address_span_extender_kernel: "acl_iface" instantiated altera_address_span_extender "address_span_extender_kernel"
+2019.10.07.17:39:02 Info: clock_cross_kernel_mem1: "acl_iface" instantiated altera_avalon_mm_clock_crossing_bridge "clock_cross_kernel_mem1"
+2019.10.07.17:39:02 Info: hps: "Running  for module: hps"
+2019.10.07.17:39:03 Info: hps: HPS Main PLL counter settings: n = 0  m = 63
+2019.10.07.17:39:03 Info: hps: HPS peripherial PLL counter settings: n = 0  m = 39
+2019.10.07.17:39:05 Info: hps: "acl_iface" instantiated altera_hps "hps"
+2019.10.07.17:39:05 Info: pipe_stage_host_ctrl: "acl_iface" instantiated altera_avalon_mm_bridge "pipe_stage_host_ctrl"
+2019.10.07.17:39:05 Info: pll: "acl_iface" instantiated altera_pll "pll"
+2019.10.07.17:39:05 Info: version_id: "acl_iface" instantiated version_id "version_id"
+2019.10.07.17:39:06 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:07 Info: mm_interconnect_0: "acl_iface" instantiated altera_mm_interconnect "mm_interconnect_0"
+2019.10.07.17:39:08 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:08 Info: mm_interconnect_1: "acl_iface" instantiated altera_mm_interconnect "mm_interconnect_1"
+2019.10.07.17:39:10 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:10 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:11 Info: mm_interconnect_2: "acl_iface" instantiated altera_mm_interconnect "mm_interconnect_2"
+2019.10.07.17:39:12 Info: mm_interconnect_3: "acl_iface" instantiated altera_mm_interconnect "mm_interconnect_3"
+2019.10.07.17:39:12 Info: irq_mapper: "acl_iface" instantiated altera_irq_mapper "irq_mapper"
+2019.10.07.17:39:12 Info: irq_mapper_001: "acl_iface" instantiated altera_irq_mapper "irq_mapper_001"
+2019.10.07.17:39:12 Info: reluLayer_system_avm_mem_gmem0_port_0_0_rw_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "reluLayer_system_avm_mem_gmem0_port_0_0_rw_translator"
+2019.10.07.17:39:12 Info: acl_iface_kernel_mem0_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "acl_iface_kernel_mem0_translator"
+2019.10.07.17:39:12 Info: kernel_pll: "acl_kernel_clk" instantiated altera_pll "kernel_pll"
+2019.10.07.17:39:12 Info: counter: "acl_kernel_clk" instantiated acl_timer "counter"
+2019.10.07.17:39:12 Info: global_routing_kernel_clk: "acl_kernel_clk" instantiated global_routing_clk "global_routing_kernel_clk"
+2019.10.07.17:39:12 Info: pll_sw_reset: "acl_kernel_clk" instantiated sw_reset "pll_sw_reset"
+2019.10.07.17:39:12 Info: pll_lock_avs_0: "acl_kernel_clk" instantiated pll_lock_avs "pll_lock_avs_0"
+2019.10.07.17:39:12 Info: pll_rom: Starting RTL generation for module 'system_acl_iface_acl_kernel_clk_pll_rom'
+2019.10.07.17:39:12 Info: pll_rom:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_acl_iface_acl_kernel_clk_pll_rom --dir=C:/Users/Hasindu/AppData/Local/Temp/alt8176_5665391416033798456.dir/0017_pll_rom_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/Hasindu/AppData/Local/Temp/alt8176_5665391416033798456.dir/0017_pll_rom_gen//system_acl_iface_acl_kernel_clk_pll_rom_component_configuration.pl  --do_build_sim=0  ]
+2019.10.07.17:39:13 Info: pll_rom: Done RTL generation for module 'system_acl_iface_acl_kernel_clk_pll_rom'
+2019.10.07.17:39:13 Info: pll_rom: "acl_kernel_clk" instantiated altera_avalon_onchip_memory2 "pll_rom"
+2019.10.07.17:39:16 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:16 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:16 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:17 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:17 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:19 Info: mm_interconnect_0: "acl_kernel_clk" instantiated altera_mm_interconnect "mm_interconnect_0"
+2019.10.07.17:39:19 Info: sys_description_rom: Starting RTL generation for module 'system_acl_iface_acl_kernel_interface_sys_description_rom'
+2019.10.07.17:39:19 Info: sys_description_rom:   Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_acl_iface_acl_kernel_interface_sys_description_rom --dir=C:/Users/Hasindu/AppData/Local/Temp/alt8176_5665391416033798456.dir/0018_sys_description_rom_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/Hasindu/AppData/Local/Temp/alt8176_5665391416033798456.dir/0018_sys_description_rom_gen//system_acl_iface_acl_kernel_interface_sys_description_rom_component_configuration.pl  --do_build_sim=0  ]
+2019.10.07.17:39:19 Info: sys_description_rom: Done RTL generation for module 'system_acl_iface_acl_kernel_interface_sys_description_rom'
+2019.10.07.17:39:19 Info: sys_description_rom: "acl_kernel_interface" instantiated altera_avalon_onchip_memory2 "sys_description_rom"
+2019.10.07.17:39:19 Info: mem_org_mode: "acl_kernel_interface" instantiated mem_org_mode "mem_org_mode"
+2019.10.07.17:39:19 Info: irq_bridge_0: "acl_kernel_interface" instantiated altera_irq_bridge "irq_bridge_0"
+2019.10.07.17:39:19 Info: irq_ena_0: "acl_kernel_interface" instantiated acl_irq_ena "irq_ena_0"
+2019.10.07.17:39:20 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:20 Info: mm_interconnect_0: "acl_kernel_interface" instantiated altera_mm_interconnect "mm_interconnect_0"
+2019.10.07.17:39:23 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:24 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:24 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:24 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:24 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:25 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:25 Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+2019.10.07.17:39:27 Info: mm_interconnect_1: "acl_kernel_interface" instantiated altera_mm_interconnect "mm_interconnect_1"
+2019.10.07.17:39:27 Info: fpga_interfaces: "hps" instantiated altera_interface_generator "fpga_interfaces"
+2019.10.07.17:39:28 Info: hps_io: "hps" instantiated altera_hps_io "hps_io"
+2019.10.07.17:39:28 Info: address_span_extender_kernel_expanded_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "address_span_extender_kernel_expanded_master_agent"
+2019.10.07.17:39:28 Info: hps_f2h_sdram0_data_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "hps_f2h_sdram0_data_agent"
+2019.10.07.17:39:28 Info: hps_f2h_sdram0_data_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "hps_f2h_sdram0_data_agent_rsp_fifo"
+2019.10.07.17:39:28 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+2019.10.07.17:39:28 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+2019.10.07.17:39:28 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+2019.10.07.17:39:28 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+2019.10.07.17:39:28 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+2019.10.07.17:39:28 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:29 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+2019.10.07.17:39:29 Info: hps_h2f_lw_axi_master_agent: "mm_interconnect_1" instantiated altera_merlin_axi_master_ni "hps_h2f_lw_axi_master_agent"
+2019.10.07.17:39:29 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+2019.10.07.17:39:29 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+2019.10.07.17:39:29 Info: pipe_stage_host_ctrl_s0_burst_adapter: "mm_interconnect_1" instantiated altera_merlin_burst_adapter "pipe_stage_host_ctrl_s0_burst_adapter"
+2019.10.07.17:39:29 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_address_alignment.sv
+2019.10.07.17:39:29 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+2019.10.07.17:39:29 Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+2019.10.07.17:39:29 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:29 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+2019.10.07.17:39:29 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+2019.10.07.17:39:29 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:29 Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+2019.10.07.17:39:29 Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
+2019.10.07.17:39:29 Info: router_001: "mm_interconnect_2" instantiated altera_merlin_router "router_001"
+2019.10.07.17:39:29 Info: pipe_stage_host_ctrl_m0_limiter: "mm_interconnect_2" instantiated altera_merlin_traffic_limiter "pipe_stage_host_ctrl_m0_limiter"
+2019.10.07.17:39:29 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_avalon_sc_fifo.v
+2019.10.07.17:39:29 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+2019.10.07.17:39:29 Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
+2019.10.07.17:39:29 Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
+2019.10.07.17:39:29 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:29 Info: rsp_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux"
+2019.10.07.17:39:29 Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
+2019.10.07.17:39:29 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:29 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+2019.10.07.17:39:30 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+2019.10.07.17:39:30 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+2019.10.07.17:39:30 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:30 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+2019.10.07.17:39:30 Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+2019.10.07.17:39:30 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:30 Info: async_fifo: "mm_interconnect_0" instantiated altera_avalon_dc_fifo "async_fifo"
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_avalon_dc_fifo.v
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_dcfifo_synchronizer_bundle.v
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_std_synchronizer_nocut.v
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_avalon_dc_fifo.sdc
+2019.10.07.17:39:30 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+2019.10.07.17:39:30 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+2019.10.07.17:39:30 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+2019.10.07.17:39:30 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:30 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:30 Info: kernel_cra_s0_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "kernel_cra_s0_cmd_width_adapter"
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_address_alignment.sv
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+2019.10.07.17:39:30 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+2019.10.07.17:39:30 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+2019.10.07.17:39:30 Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+2019.10.07.17:39:30 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+2019.10.07.17:39:30 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+2019.10.07.17:39:30 Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:30 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+2019.10.07.17:39:30 Info: rsp_demux_002: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux_002"
+2019.10.07.17:39:30 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_merlin_arbitrator.sv
+2019.10.07.17:39:30 Info: crosser: "mm_interconnect_1" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+2019.10.07.17:39:30 Info: Reusing file C:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer/system/synthesis/submodules/altera_std_synchronizer_nocut.v
+2019.10.07.17:40:06 Info: border: "hps_io" instantiated altera_interface_generator "border"
+2019.10.07.17:40:06 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+2019.10.07.17:40:06 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+2019.10.07.17:40:06 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+2019.10.07.17:40:06 Info: system: Done "system" with 93 modules, 246 files

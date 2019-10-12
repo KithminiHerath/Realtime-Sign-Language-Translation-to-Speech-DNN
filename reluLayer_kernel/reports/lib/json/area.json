@@ -1,0 +1,295 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [14.4679, 8.08144, 6.96665, 9.53307, 1.78571]
+  , "total":
+  [8855, 15267, 49, 2]
+  , "name":"Kernel System"
+  , "max_resources":
+  [109572, 219144, 514, 112]
+  , "children":
+  [
+    {
+      "name":"Board interface"
+      , "type":"resource"
+      , "data":
+      [2160, 1908, 20, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Platform interface logic."
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [3566, 7148, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 1 global load and 1 global store."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"https://www.altera.com/documentation/mwh1391807516407.html#hnj1476724450050"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"RELUActivation"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [5.52209, 2.85566, 2.83421, 5.64202, 1.78571]
+      , "total_kernel_resources":
+      [3129, 6211, 29, 2]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1574, 1505, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"RELUActivation.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [199, 396, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [199, 396, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [188, 88, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"reluLayer.cl:4"
+                  , "type":"resource"
+                  , "data":
+                  [101, 1, 0, 2]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer.cl"
+                        , "line":4
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [66, 0, 0, 2]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"reluLayer.cl:5"
+                  , "type":"resource"
+                  , "data":
+                  [713, 2049, 13, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer.cl"
+                        , "line":5
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Floating-point Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [192, 15, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [470, 2034, 13, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [51, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"reluLayer.cl:6"
+                  , "type":"resource"
+                  , "data":
+                  [177, 1086, 8, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer.cl"
+                        , "line":6
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [177, 1086, 8, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"reluLayer.cl:9"
+                  , "type":"resource"
+                  , "data":
+                  [177, 1086, 8, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/Hasindu/Documents/University/Innovate FPGA/Neural_Network/OpenCLNN/OpenCLNN/reluLayer.cl"
+                        , "line":9
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [177, 1086, 8, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

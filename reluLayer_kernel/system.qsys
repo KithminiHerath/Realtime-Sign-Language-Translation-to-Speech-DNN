@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element acl_iface
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element acl_iface.kernel_mem0
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element avs_RELUActivation_cra_cra_ring
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element cra_root
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element ext_clk_50
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element reluLayer_system
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="FIFO" />
+ <parameter name="device" value="5CSXFC6D6F31C6" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="6_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="0" />
+ <parameter name="projectName" value="top.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk_50" internal="ext_clk_50.clk_in" type="clock" dir="end" />
+ <interface name="fpga_memory" internal="acl_iface.fpga_memory" />
+ <interface name="fpga_memory_oct" internal="acl_iface.fpga_memory_oct" />
+ <interface
+   name="fpga_sdram_pll_sharing"
+   internal="acl_iface.fpga_sdram_pll_sharing" />
+ <interface name="fpga_sdram_status" internal="acl_iface.fpga_sdram_status" />
+ <interface
+   name="kernel_clk"
+   internal="acl_iface.kernel_clk_snoop"
+   type="clock"
+   dir="start" />
+ <interface name="memory" internal="acl_iface.memory" type="conduit" dir="end" />
+ <interface
+   name="peripheral"
+   internal="acl_iface.peripheral"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="reset_50"
+   internal="ext_clk_50.clk_in_reset"
+   type="reset"
+   dir="end" />
+ <module name="acl_iface" kind="acl_iface_system" version="1.0" enabled="1">
+  <parameter name="AUTO_CONFIG_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CONFIG_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CONFIG_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_DEVICE" value="5CSXFC6D6F31C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6_H6" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_KERNEL_CRA_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_KERNEL_CRA_ADDRESS_WIDTH" value="AddressWidth = -1" />
+  <parameter name="AUTO_KERNEL_IRQ_INTERRUPTS_USED" value="0" />
+  <parameter name="AUTO_KERNEL_PLL_REFCLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_KERNEL_PLL_REFCLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_KERNEL_PLL_REFCLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_UNIQUE_ID">$${FILENAME}_acl_iface</parameter>
+ </module>
+ <module
+   name="avs_RELUActivation_cra_cra_ring"
+   kind="cra_ring_node"
+   version="1.0"
+   enabled="1">
+  <parameter name="ASYNC_RESET" value="1" />
+  <parameter name="CRA_ADDR_W" value="4" />
+  <parameter name="DATA_W" value="64" />
+  <parameter name="ID" value="0" />
+  <parameter name="ID_W" value="0" />
+  <parameter name="RING_ADDR_W" value="4" />
+  <parameter name="SYNCHRONIZE_RESET" value="0" />
+ </module>
+ <module name="cra_root" kind="cra_ring_root" version="1.0" enabled="1">
+  <parameter name="ADDR_W" value="4" />
+  <parameter name="ASYNC_RESET" value="1" />
+  <parameter name="DATA_W" value="64" />
+  <parameter name="ID_W" value="0" />
+  <parameter name="ROM_ENABLE" value="0" />
+  <parameter name="ROM_EXT_W" value="0" />
+  <parameter name="SYNCHRONIZE_RESET" value="0" />
+ </module>
+ <module name="ext_clk_50" kind="clock_source" version="18.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="reluLayer_system"
+   kind="reluLayer_system"
+   version="14.0"
+   enabled="1" />
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="reluLayer_system.avm_mem_gmem0_port_0_0_rw"
+   end="acl_iface.kernel_mem0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="avs_RELUActivation_cra_cra_ring.cra_master"
+   end="reluLayer_system.avs_RELUActivation_cra">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="acl_iface.kernel_cra"
+   end="cra_root.cra_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="clock"
+   version="18.1"
+   start="ext_clk_50.clk"
+   end="acl_iface.config_clk" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="ext_clk_50.clk"
+   end="acl_iface.kernel_pll_refclk" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="acl_iface.kernel_clk"
+   end="cra_root.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="acl_iface.kernel_clk"
+   end="avs_RELUActivation_cra_cra_ring.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="acl_iface.kernel_clk"
+   end="reluLayer_system.clock_reset" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="acl_iface.kernel_clk2x"
+   end="reluLayer_system.clock_reset2x" />
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="cra_root.ring_out"
+   end="avs_RELUActivation_cra_cra_ring.ring_in">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="avs_RELUActivation_cra_cra_ring.ring_out"
+   end="cra_root.ring_in">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="18.1"
+   start="acl_iface.kernel_irq"
+   end="reluLayer_system.kernel_irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="18.1"
+   start="ext_clk_50.clk_reset"
+   end="acl_iface.global_reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="acl_iface.kernel_reset"
+   end="reluLayer_system.clock_reset_reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="acl_iface.kernel_reset"
+   end="cra_root.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="acl_iface.kernel_reset"
+   end="avs_RELUActivation_cra_cra_ring.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="FIFO" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="0" />
+</system>

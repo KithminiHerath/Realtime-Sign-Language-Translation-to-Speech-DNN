@@ -1,0 +1,10 @@
+__kernel void matrix_multiply(const int M, const int N, const int P,const __global double* A, const __global double* B, __global double* C, const __global double* D) {
+	int i = get_global_id(0);
+	double C_value = 0.0f;
+	if (i < N) {
+		for (int k = 0; k < P; k++) {
+			C_value += A[i * P + k] * B[k];
+		}
+		C[i] = C_value + D[i];
+	}
+}
