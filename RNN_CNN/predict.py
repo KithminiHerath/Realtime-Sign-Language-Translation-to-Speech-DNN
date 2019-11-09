@@ -27,7 +27,7 @@ def interpolating(data,n_rows): #output of read_csv
 n_steps, n_length = 4, 25 # n_timesteps = n_steps * n_length (n_timesteps =100)
 n_features=17
 model_dir='E:/ML_projects/myoband/with_CLEANED_2/models/conv_lstm_full.h5'
-dict_labels={0:'NO',1:'THANK YOU',2:'WATER',3:'YELLOW',4:'YES'}
+dict_labels={0:'NO',1:'THANKYOU',2:'WATER',3:'YELLOW',4:'YES'}
 
 def csv_read(csv_dir):
     f = open(csv_dir,'rb')
