@@ -6,7 +6,7 @@
 
 ## Machine Learning Background 
 
-This project is carried out for the Intellihack 2019 competition by team fastermosquitonet150. Our motive of the project is to create a device that helps the people with speech and hearing disorders. We used Myo armband, a device which measures the electrical activity from human muscles. Thus detects the gestures shown.
+The Machine Learning aspect of this project is carried out for the **Intellihack 2019 competition by team fastermosquitonet150**. Our motive of the project is to create a device that helps the people with speech and hearing disorders. We used Myo armband, a device which measures the electrical activity from human muscles. Thus detects the gestures shown.
 
 Our project consists of two main sections and they are;.
 * Pre processing of the raw EMG, Gyroscope and Accelerometer signals using Digital Signal Processing techniques
