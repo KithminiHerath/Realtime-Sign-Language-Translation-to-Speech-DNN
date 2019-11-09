@@ -1,11 +1,18 @@
 # Realtime-Sign-Language-Translation-to-Speech-DNN
+
+## FPGA Implementation Background
+
+[InnovateFPGA Project Page](http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP047)
+
+## Machine Learning Background 
+
 This project is carried out for the Intellihack 2019 competition by team fastermosquitonet150. Our motive of the project is to create a device that helps the people with speech and hearing disorders. We used Myo armband, a device which measures the electrical activity from human muscles. Thus detects the gestures shown.
 
 Our project consists of two main sections and they are;.
 * Pre processing of the raw EMG, Gyroscope and Accelerometer signals using Digital Signal Processing techniques
 * Training a Deep Neural Network(DNN) to classify 5 sign language gestures.
 
-A raw data of myo armband signals is required to cary out the project and we came over a public dataset for identifying American Sign Language(ASL)  Classification in the following [website](https://data.mendeley.com/datasets/wgswcr8z24/2). Unfortunately the unavailabity of fata collection process of this dataset, we generated our own dataset of myo armband signals for 5 ASL gestures. 
+A raw data of myo armband signals is required to cary out the project and we came over a public dataset for identifying American Sign Language(ASL)  Classification in the following [website](https://data.mendeley.com/datasets/wgswcr8z24/2). Unfortunately the unavailabity of data collection process of this dataset, we generated our own dataset of myo armband signals for 5 ASL gestures. 
 
 The preprocessing technique goes on cleaning the raw data in order to feed a crystal clear form of gestures to the neural network to be trained. Digital Signal Processing techniques such as low-pass filtering followed by hilbert transform are used to carry out the work.
 
