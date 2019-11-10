@@ -23,5 +23,8 @@ Our features include;
 
 Finally we created a neural network which utlizes these features for the classification process and our neural network was capable of producing a training accuracy of 98.84%, a validation accuracy of 95.45% and a test accuracy of 92.86%.
 
+
+[Presentation Link](https://go.the-ai.team/x04DZX)
+
 [![Project demonstration video](https://github.com/KithminiHerath/Realtime-Sign-Language-Translation-to-Speech-DNN/blob/master/maxresdefault-4.jpg?raw=true)](https://youtu.be/jygNk3SqnJ8)
 
