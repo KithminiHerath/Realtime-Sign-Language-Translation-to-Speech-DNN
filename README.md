@@ -27,6 +27,9 @@ Finally we created a neural network which utlizes these features for the classif
 [Our Notebook used for intellihack purposes is located here](https://github.com/KithminiHerath/Realtime-Sign-Language-Translation-to-Speech-DNN/blob/master/DataCollection%20%26%20Inference%20-%20IntelliHack/new%20NN/newDNN_for_new_dataset.ipynb)
 
 
+#### Dataset we made & C++ code to get MYO Data
+[Main Working Directory for Intellihack](https://github.com/KithminiHerath/Realtime-Sign-Language-Translation-to-Speech-DNN/tree/master/DataCollection%20%26%20Inference%20-%20IntelliHack)
+
 [Presentation Link](https://go.the-ai.team/x04DZX)
 
 [![Project demonstration video](https://github.com/KithminiHerath/Realtime-Sign-Language-Translation-to-Speech-DNN/blob/master/maxresdefault-4.jpg?raw=true)](https://youtu.be/jygNk3SqnJ8)
