@@ -23,6 +23,9 @@ Our features include;
 
 Finally we created a neural network which utlizes these features for the classification process and our neural network was capable of producing a training accuracy of 98.84%, a validation accuracy of 95.45% and a test accuracy of 92.86%.
 
+#### Notebook used for IntelliHack Hackathon
+[Our Notebook used for intellihack purposes is located here](https://github.com/KithminiHerath/Realtime-Sign-Language-Translation-to-Speech-DNN/blob/master/DataCollection%20%26%20Inference%20-%20IntelliHack/new%20NN/newDNN_for_new_dataset.ipynb)
+
 
 [Presentation Link](https://go.the-ai.team/x04DZX)
 
