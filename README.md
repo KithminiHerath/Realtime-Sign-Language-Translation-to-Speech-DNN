@@ -1,5 +1,8 @@
 # Realtime-Sign-Language-Translation-to-Speech-DNN
 
+![Work in Progress](https://img.shields.io/badge/Work-In--Progress-purple.svg?longCache=true&style=popout-square)
+We encourage inputs from the public to enhance our execution! 
+
 ## FPGA Implementation Background
 
 [InnovateFPGA Project Page](http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP047)
