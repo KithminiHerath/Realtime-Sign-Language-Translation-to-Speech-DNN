@@ -5,7 +5,7 @@ We encourage inputs from the public to enhance our execution!
 
 ## FPGA Implementation Background
 
-[InnovateFPGA Project Page](http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP047)
+[InnovateFPGA Project Page](https://web.archive.org/web/20200921092633/http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP047)
 
 ## Machine Learning Background 
 
